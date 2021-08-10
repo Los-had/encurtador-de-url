@@ -6,12 +6,15 @@ encurta links sem login ou qualquer outra coisa necessária, link: [https://encu
 baixe o projeto no github, depois abra seu terminal e digite:
 
 ```
-cd encurtador-de-url
-pip install -r requirements.txt
-python app.py
+$ cd encurtador-de-url
+    # entra na pasta do programa
+$ pip install -r requirements.txt
+    # instala as dependências
+$ python app.py
+    # executa o programa
 ```
 
-para encerrar o servidor pressione ``Ctrl + C``
+para encerrar o servidor pressione <kbd>Ctrl</kbd><kbd>+</kbd><kbd>C</kbd>
 
 ## Licença
 [MIT](LICENSE)
