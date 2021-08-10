@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1 class="center-align">Encurtador de url</h1>
+<div class="row">
+    <form action="{{ url_for('resultado') }}" method="post" class="col s12">
+        <div class="input-field col s12">
+            <input type="text" name="url" id="url" class="validate" placeholder="https://example.com">
+        </div>
+        <input type="submit" value="Encurtar!" class="btn blue center-align">
+    </form>
+</div>
+{% endblock %}
