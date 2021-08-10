@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<h3>Pronto! Aqui está seu link.</h3>
 <div class="row center-align">
-    <p id="novo-link">{{ nova_url }}</p>
+    <h3>Pronto! Aqui está seu link.</h3>
+    <p id="link">{{ nova_url }}</p>
+    <br>
     <button class="btn blue" onclick="copiar()">Copiar</button>
 </div>
 {% endblock %}
