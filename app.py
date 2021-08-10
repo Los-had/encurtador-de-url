@@ -13,10 +13,10 @@ print(f'\n{nova_url}')
 
 @app.route('/', methods=['GET'])
 def index():
-    #try:
-    return render_template('index.html')
-    #except:
-        #return redirect('/error')
+    try:
+        return render_template('index.html')
+    except:
+        return redirect('/error')
 
 @app.route('/error')
 def error():
@@ -24,16 +24,16 @@ def error():
 
 @app.route('/resultado', methods=['GET', 'POST'])
 def resultado():
-    #try:
-    if request.method == 'POST':
-        link_do_usuário = request.form['url']
-        encurtador = pyshorteners.Shortener()
-        nova_url = encurtador.tinyurl.short(link_do_usuário)
-        return render_template('resultado.html', nova_url=nova_url) 
-    else:
+    try:
+        if request.method == 'POST':
+            link_do_usuário = request.form['url']
+            encurtador = pyshorteners.Shortener()
+            nova_url = encurtador.tinyurl.short(link_do_usuário)
+            return render_template('resultado.html', nova_url=nova_url) 
+        else:
+            return redirect('/error')
+    except:
         return redirect('/error')
-    #except:
-        #return redirect('/error')
 
 if __name__ == '__main__':
     app.run(debug=True)
